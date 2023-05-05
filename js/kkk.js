@@ -1,8 +1,15 @@
 
-  function reproducirMusica() {
-  audio.play();
-  
+function reproducirMusica() {
+  if (audio.paused) {
+    audio.play();
+    btnMusica.innerHTML = 'Pausar música';
+  } else {
+    audio.pause();
+    btnMusica.innerHTML = 'Reproducir música';
   }
+}
+
+
 // Reproducir la canción seleccionada
 function playAudio() {
   audio.src = songSelect.value;
@@ -33,3 +40,4 @@ function cambiarImagen() {
     audio.play();
   }
 }
+

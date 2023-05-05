@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js">
     </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-l3qK3nUz3dDnW/JUvA4EO4f4gjKM8yWkoC7wHfBh51TFLxjk2ZKPzH10eQVtBftSQfnbptC7J/mBLpvQ2V7gHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/kkk.js"> 
@@ -17,12 +17,15 @@
     <link rel="icon" href="img/t1.png" type="image/x-icon">
     <title>T1</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
+
+   
+    
+
     <audio id="my-audio" src="music/TakeOver.mp3"></audio>
     <button id="btn-musica" onclick="reproducirMusica()">Reproducir música</button>
-    
-    <button id="play-btn" onclick="playAudio()">Reproducir</button>
 
-    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" onchange="setVolume()">
+    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" onchange="setVolume()" style="position: fixed; margin-left: 20px;  z-index: 1; ">
+
 
     <select id="song-select">
         <option value="music/TakeOver.mp3">Canción 1</option>
@@ -38,24 +41,16 @@
         <div class="textos-hero" div id="inicio">
             <h1 class="h1">T1</h1>
             <p>Quieres unirte papu?, contesta la encuesta</p>
+            <a class="nav-link" href="#inicio">Inicio</a>
+            <a class="nav-link" href="#QuienesSomos">Acerca de</a>
+            <a class="nav-link" href="#integrantes">integrantes</a>
+            <a class="nav-link" href="#redes sociales">Redes Sociales</a>
             <a href="#contacto">Contactanos / 문의하기</a>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" >
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#QuienesSomos">Acerca de</a>
-                    </li>
-                    <a class="nav-link" href="#integrantes">integrantes</a>
-                    </li>
-                </li>
-                <a class="nav-link" href="#redes sociales">Redes Sociales</a>
-                </li>
+                
                     
 
                   </ul>
@@ -70,18 +65,16 @@
     </header>
 
 
-    <section class="contenedor website" style="background-image:url(img/LaGrieta.jpg)" >
+    <section class="contenedor website" style="background-image:url(img/LaGrieta.jpg); background-size: cover;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-</nav>
+        </nav>
         <img src="img/Draven.png" alt="">
         <div class="contenedor-textos-main" div id="QuienesSomos">
             <h2 class="titulo left">Quienes somos?</h2>
             <p class="parrafo">Si te interesa saber, Apreta aqui</p>
             <a href="https://www.t1.gg" class="cta">바보는 배운다</a>
         </div>
-            
-
-    </section>
+      </section>
 
     <section class="info">
         <div class="contenedor">
@@ -153,7 +146,12 @@
             
            
             <img id="imagen" src="img/Amongus.png" onclick="cambiarImagen()">
-            <img src="img/FakerSiendoFaker.jpg" alt="">
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vGaC4OZIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <img src="img/FakerSiendoFaker.jpg" alt="Faker diciendo shh platita" style="float: right;">
+
+
         </div>
         
         <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -183,10 +181,12 @@
         var pauseBtn = document.getElementById("pause-btn");
         var stopBtn = document.getElementById("stop-btn");
         var volumeSlider = document.getElementById("volume-slider");
+        
         //function pauseAudio() {
          //   audio.pause();
          // }
     </script>
+    
 
 </body>
 
